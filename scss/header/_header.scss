@@ -1,0 +1,159 @@
+header {
+  width: 100%;
+  .general-header {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .row {
+        width: 100%;
+      }
+      .col-2 {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0;
+        .br-icons{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .search-button{
+              margin-right: 25px;
+              font-size: 30px;
+              &:hover{
+                opacity: 0.7;
+              }
+            }
+            .pdf-link{
+                color: var(--futureart-1);
+                font-size: 30px;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+      }
+      .col-10 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
+    }
+    .header-logo {
+      max-width: 115px;
+      & img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .right-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .top{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        .top-languages{
+            padding: 0 15px;
+            padding-right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & a{
+                color: rgba(0, 0, 0, 0.7);
+                text-decoration: underline;
+                font-weight: 600;
+                font-size: 18px;
+                margin-right: 15px;
+                &.active{
+                    color: var(--futureart-1);
+                }
+            }
+        }
+      }
+      .social-icons{
+        padding: 0 10px;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        & a:hover{
+            background-color: var(--futureart-1);
+            color: var(--futureart-6);
+            animation: ease infinite;
+            animation-name: s_icons;
+            animation-duration: 0.9s;
+        }
+        @keyframes s_icons{
+            0%{
+                box-shadow: 0 0 0 0 var(--futureart-1);
+            }
+
+            80%{
+                box-shadow: 0 0 0 10px rgba(255, 134, 134, 0);
+            }
+
+            100%{
+                box-shadow: 0 0 0 0 rgba(255, 134, 134, 0);
+            }
+        }
+      }
+      .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 30px;
+        & .links{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                color: rgba(0, 0, 0, 0.9);
+                position: relative;
+                &::after{
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  bottom: -10%;
+                  width: 100%;
+                  height: 1px;
+                  transition: .3s;
+                  transform: scaleX(0);
+                  background-color: transparent;
+                }
+                &::after{
+                  width: 0;
+                  transform: scale(1);
+                }
+                &:hover{
+                    color: var(--futureart-1);
+                    &::after{
+                      background-color: var(--futureart-1);
+                      width: 100%;
+                    }
+                }
+            }
+            @media only screen and (min-width:1200px){
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+        .row{
+            width: 100%;
+        }
+      }
+    }
+  }
+}
