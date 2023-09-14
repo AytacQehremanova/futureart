@@ -38,7 +38,6 @@ button {
   align-items: center;
   justify-content: center;
 }
-
 .social-icons a {
   width: 35px;
   height: 35px;
@@ -50,9 +49,99 @@ button {
   align-items: center;
   justify-content: center;
 }
+.social-icons a:hover {
+  background-color: var(--futureart-1);
+  color: var(--futureart-6);
+  animation: ease infinite;
+  animation-name: s_icons;
+  animation-duration: 0.9s;
+}
+@keyframes s_icons {
+  0% {
+    box-shadow: 0 0 0 0 var(--futureart-1);
+  }
+  80% {
+    box-shadow: 0 0 0 10px rgba(255, 134, 134, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 134, 134, 0);
+  }
+}
 
 .search-button {
   color: var(--futureart-1);
+  margin-right: 25px;
+  font-size: 30px;
+}
+.search-button:hover {
+  opacity: 0.7;
+}
+
+.search-input {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #ededed;
+}
+.search-input form {
+  width: 100%;
+  position: relative;
+}
+.search-input .form-control {
+  border: none;
+  box-shadow: none;
+  caret-color: var(--futureart-1);
+  color: var(--futureart-1);
+  background-color: #ededed;
+  width: 100%;
+  font-weight: 500;
+  padding: 12px 15px;
+  padding-right: 45px;
+}
+.search-input button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin: 0 10px;
+  transform: translateY(-50%);
+}
+.search-input button i {
+  color: var(--futureart-1);
+  font-size: 20px;
+}
+
+.col-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.col-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.close-button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid var(--futureart-1);
+  margin: 10px 0;
+}
+.close-button i {
+  color: var(--futureart-1);
+  font-size: 24px;
+}
+.close-button:hover {
+  background-color: var(--futureart-1);
+  transition: all 0.3s;
+}
+.close-button:hover i {
+  color: var(--futureart-6);
 }
 
 header {
@@ -86,9 +175,6 @@ header .general-header .container .col-2 .br-icons {
 header .general-header .container .col-2 .br-icons .search-button {
   margin-right: 25px;
   font-size: 30px;
-}
-header .general-header .container .col-2 .br-icons .search-button:hover {
-  opacity: 0.7;
 }
 header .general-header .container .col-2 .br-icons .pdf-link {
   color: var(--futureart-1);
@@ -148,24 +234,6 @@ header .general-header .right-wrapper .social-icons {
   padding: 0 10px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-header .general-header .right-wrapper .social-icons a:hover {
-  background-color: var(--futureart-1);
-  color: var(--futureart-6);
-  animation: ease infinite;
-  animation-name: s_icons;
-  animation-duration: 0.9s;
-}
-@keyframes s_icons {
-  0% {
-    box-shadow: 0 0 0 0 var(--futureart-1);
-  }
-  80% {
-    box-shadow: 0 0 0 10px rgba(255, 134, 134, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 134, 134, 0);
-  }
-}
 header .general-header .right-wrapper .bottom {
   display: flex;
   align-items: center;
@@ -212,4 +280,186 @@ header .general-header .right-wrapper .bottom .links a:hover::after {
 }
 header .general-header .right-wrapper .bottom .row {
   width: 100%;
+}
+header .mobile-navbar {
+  width: 100%;
+  padding: 15px 0;
+}
+header .mobile-navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .mobile-navbar .container .row {
+  width: 100%;
+}
+header .mobile-navbar .container .row .col-6 {
+  padding: 0;
+}
+header .mobile-navbar .header-logo {
+  max-width: 70px;
+}
+@media only screen and (min-width: 576px) {
+  header .mobile-navbar .header-logo {
+    max-width: 90px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header .mobile-navbar .header-logo {
+    max-width: 120px;
+  }
+}
+header .mobile-navbar .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .mobile-navbar .right .mobile-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .mobile-navbar .right .mobile-phone i {
+  color: var(--futureart-1);
+  font-size: 20px;
+}
+@media only screen and (min-width: 576px) {
+  header .mobile-navbar .right .mobile-phone i {
+    font-size: 24px;
+  }
+}
+header .mobile-navbar .right .mobile-phone span {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media only screen and (min-width: 576px) {
+  header .mobile-navbar .right .mobile-phone span {
+    font-size: 20px;
+  }
+}
+header .mobile-navbar .right .mobile-phone .fa-phone:hover {
+  animation: ease infinite;
+  animation-name: faphone;
+  animation-duration: 0.2s;
+}
+@keyframes faphone {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(12deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-12deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+header .mobile-navbar .right .mobile-right {
+  margin-right: 15px;
+}
+header #mobile-menu .offcanvas-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+header #mobile-menu .offcanvas-wrapper a {
+  color: var(--futureart-1);
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px;
+}
+header #mobile-menu .offcanvas-wrapper a:hover {
+  background-color: var(--futureart-1);
+  color: var(--futureart-6);
+  animation: ease infinite;
+  animation-name: canvaslinks;
+  animation-duration: 0.9s;
+}
+@keyframes canvaslinks {
+  0% {
+    box-shadow: 0 0 0 0 var(--futureart-1);
+  }
+  80% {
+    box-shadow: 0 0 0 10px rgba(255, 134, 134, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 134, 134, 0);
+  }
+}
+header #mobile-menu .canvas-links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+header #mobile-menu .canvas-links a {
+  color: var(--futureart-1);
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  padding: 12px 25px;
+}
+header #mobile-menu .canvas-links a i {
+  margin-right: 5px;
+}
+header #mobile-menu .canvas-links a:hover {
+  background-color: var(--futureart-1);
+  color: var(--futureart-6);
+  animation: ease infinite;
+  animation-name: canvaslinks;
+  animation-duration: 0.9s;
+}
+header #mobile-menu .canvas-links a:hover .fa-phone {
+  animation: ease infinite;
+  animation-name: faphone;
+  animation-duration: 0.2s;
+}
+header #mobile-menu .canvas-links :first-child {
+  margin-top: 10px;
+}
+
+header #search-offcanvas .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+header #search-offcanvas .container .row {
+  width: 100%;
+}
+
+.menu-button {
+  color: var(--futureart-1);
+  font-size: 20px;
+}
+.menu-button:hover {
+  opacity: 0.7;
+}
+
+@media only screen and (min-width: 380px) {
+  .menu-button {
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=style.css.map */

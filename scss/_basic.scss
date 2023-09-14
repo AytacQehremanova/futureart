@@ -39,20 +39,109 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    & a{
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-right: 5px;
+        color: var(--futureart-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    & a:hover{
+        background-color: var(--futureart-1);
+        color: var(--futureart-6);
+        animation: ease infinite;
+        animation-name: s_icons;
+        animation-duration: 0.9s;
+    }
+    @keyframes s_icons{
+        0%{
+            box-shadow: 0 0 0 0 var(--futureart-1);
+        }
 
-.social-icons a{
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-    border-radius: 5px;
-    margin-right: 5px;
-    color: var(--futureart-1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        80%{
+            box-shadow: 0 0 0 10px rgba(255, 134, 134, 0);
+        }
+
+        100%{
+            box-shadow: 0 0 0 0 rgba(255, 134, 134, 0);
+        }
+    }
 }
 
 .search-button{
     color: var(--futureart-1);
+    margin-right: 25px;
+    font-size: 30px;
+    &:hover{
+        opacity: 0.7;
+    }
 }
+
+.search-input{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #ededed;
+    & form{
+        width: 100%;
+        position: relative;
+    }
+    .form-control{
+        border: none;
+        box-shadow: none;
+        caret-color: var(--futureart-1);
+        color: var(--futureart-1);
+        background-color: #ededed;
+        width: 100%;
+        font-weight: 500;
+        padding: 12px 15px;
+        padding-right: 45px;
+    }
+    button{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin: 0 10px;
+        transform: translateY(-50%);
+        i{
+            color: var(--futureart-1);
+            font-size: 20px;
+        }
+    }
+}
+.col-end{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.col-start{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.close-button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--futureart-1);
+    margin: 10px 0;
+    & i{
+        color: var(--futureart-1);
+        font-size: 24px;
+    }
+    &:hover{
+        background-color: var(--futureart-1);
+        transition: all .3s;
+        i{
+            color: var(--futureart-6);
+        }
+    }
+}
+

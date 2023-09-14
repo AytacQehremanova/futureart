@@ -24,9 +24,6 @@ header {
             .search-button{
               margin-right: 25px;
               font-size: 30px;
-              &:hover{
-                opacity: 0.7;
-              }
             }
             .pdf-link{
                 color: var(--futureart-1);
@@ -86,26 +83,6 @@ header {
       .social-icons{
         padding: 0 10px;
         border-right: 1px solid rgba(0, 0, 0, 0.1);
-        & a:hover{
-            background-color: var(--futureart-1);
-            color: var(--futureart-6);
-            animation: ease infinite;
-            animation-name: s_icons;
-            animation-duration: 0.9s;
-        }
-        @keyframes s_icons{
-            0%{
-                box-shadow: 0 0 0 0 var(--futureart-1);
-            }
-
-            80%{
-                box-shadow: 0 0 0 10px rgba(255, 134, 134, 0);
-            }
-
-            100%{
-                box-shadow: 0 0 0 0 rgba(255, 134, 134, 0);
-            }
-        }
       }
       .bottom{
         display: flex;
@@ -153,6 +130,166 @@ header {
         .row{
             width: 100%;
         }
+      }
+    }
+  }
+  .mobile-navbar{
+    width: 100%;
+    padding: 15px 0;
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .row{
+        width: 100%;
+        .col-6{
+          padding: 0;
+        }
+      }
+    }
+    .header-logo{
+      max-width: 70px;
+    }
+    @media only screen and (min-width:576px){
+      .header-logo{
+        max-width: 90px;
+      }
+    }
+    @media only screen and (min-width:768px){
+      .header-logo{
+        max-width: 120px;
+      }
+    }
+    .right{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .mobile-phone{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & i{
+          color: var(--futureart-1);
+          font-size: 20px;
+        }
+        @media only screen and (min-width: 576px){
+          i{
+            font-size: 24px;
+          }
+        }
+        span{
+          color: #000;
+          font-size: 18px;
+          font-weight: 500;
+        }
+        @media only screen and (min-width:576px){
+          span{
+            font-size: 20px;
+          }
+        }
+        .fa-phone:hover{
+          animation: ease infinite;
+          animation-name: faphone;
+          animation-duration: 0.2s;
+        }
+        @keyframes faphone{
+          0%{
+            transform: rotate(0);
+          }
+          25%{
+            transform: rotate(12deg);
+          }
+          50%{
+            transform: rotate(0);
+          }
+          75%{
+            transform: rotate(-12deg);
+          }
+          100%{
+            transform: rotate(0);
+          }
+        }
+      }
+      .mobile-right{
+        margin-right: 15px;
+      }
+    }
+  }
+  #mobile-menu{
+    .offcanvas-wrapper{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 10px;
+      & a{
+        color: var(--futureart-1);
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 25px;
+      }
+      a:hover{
+        background-color: var(--futureart-1);
+        color: var(--futureart-6);
+        animation: ease infinite;
+        animation-name: canvaslinks;
+        animation-duration: 0.9s;
+      }
+      @keyframes canvaslinks{
+        0%{
+            box-shadow: 0 0 0 0 var(--futureart-1);
+        }
+
+        80%{
+            box-shadow: 0 0 0 10px rgba(255, 134, 134, 0);
+        }
+
+        100%{
+            box-shadow: 0 0 0 0 rgba(255, 134, 134, 0);
+        }
+    }
+    }
+    .canvas-links{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 10px;
+      & a{
+        color: var(--futureart-1);
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+        padding: 12px 25px;
+        i{
+          margin-right: 5px;
+        }
+      }
+      a:hover{
+        background-color: var(--futureart-1);
+        color: var(--futureart-6);
+        animation: ease infinite;
+        animation-name: canvaslinks;
+        animation-duration: 0.9s;
+        .fa-phone{
+          animation: ease infinite;
+          animation-name: faphone;
+          animation-duration: 0.2s;
+        }
+      }
+      :first-child{
+        margin-top: 10px;
       }
     }
   }
