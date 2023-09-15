@@ -293,4 +293,35 @@ header {
       }
     }
   }
+  .dropdown-button{
+    span{
+        color: var(--futureart-1);
+        font-size: 22px;
+        font-weight: 500;
+        margin-right: 15px;
+        &:hover{
+          opacity: 0.7;
+        }
+      }
+  }
+  .dropdown-menu{
+    min-width: 60px;
+    li{
+      padding: 0 5px;
+    }
+    .menu-item{
+      color: var(--futureart-1);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      &:hover{
+        background-color: var(--futureart-1);
+        color: var(--futureart-6);
+        transition: all .3s;
+      }
+    }
+  }
 }
+

@@ -9,6 +9,20 @@
     --futureart-6: #fff;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--futureart-5);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--futureart-1);
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -145,3 +159,35 @@ button{
     }
 }
 
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    width: 100%;
+}
+section{
+    width: 100%;
+    margin-bottom: 30px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+.section-title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 25px;
+    font-weight: 500;
+}
