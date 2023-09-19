@@ -38,6 +38,13 @@ body{
 a{
     text-decoration: none;
 }
+
+.swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: var(--futureart-1);
+    border-radius: 50%;
+}
   
 button{
     background-color: transparent;
@@ -190,4 +197,50 @@ section{
     justify-content: flex-start;
     font-size: 25px;
     font-weight: 500;
+    :hover{
+        color: var(--futureart-1);
+        transition: all .3s;
+    }
+}
+
+.service-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--futureart-6);
+    padding: 25px 20px;
+    width: 100%;
+    max-width: 370px;
+    .title{
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 10px;
+        p{
+            margin-top: 15px;
+        }
+    }
+    .text{
+        font-size: 12px;
+        text-align: center;
+        line-height: 22px;
+    }
+    &:hover{
+        background: linear-gradient(180deg,var(--futureart-1) 0%, var(--futureart-4) 100%);
+        transition: all .3s;
+        .normal-logo{
+            display: none;
+        }
+        .white-logo{
+            display: flex;
+        }
+        .title{
+            color: var(--futureart-6);
+            transition: all .5s;
+        }
+        .text{
+            color: var(--futureart-6);
+        }
+    }
 }

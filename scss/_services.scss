@@ -14,8 +14,18 @@ section{
                 margin-bottom: 20px;
             }
             .title-col{
-                margin-bottom: 30px;
+                margin-bottom: 10px;
+                .small-title{
+                    font-size: 14px;
+                    text-align: center;
+                    padding: 15px 0;
+                }
             }
+        }
+        .white-logo{
+            display: none;
+            width: 66px;
+            height: 66px;
         }
     }
 }
