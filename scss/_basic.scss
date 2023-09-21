@@ -244,3 +244,32 @@ section{
         }
     }
 }
+
+.page-scroll-button{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: var(--futureart-6);
+    background-color: var(--futureart-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--futureart-6);
+    border-radius: 5px;
+    z-index: 9;
+    bottom: 30px;
+    right: 30px;
+    animation: page_scroll 1s ease forwards;
+}
+@keyframes page_scroll{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

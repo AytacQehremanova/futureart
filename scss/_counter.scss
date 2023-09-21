@@ -1,0 +1,57 @@
+section{
+    &.counter{
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 0;
+        .counter-wrapper{
+            width: 100%;
+            min-height: 380px;
+            color: var(--futureart-6);
+            .col-12{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .counter-item{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+                padding: 15px;
+                border-radius: 5px;
+                .counter-span{
+                    font-size: 45px;
+                    font-weight: 500;
+                    margin-bottom: 20px;
+                }
+                .name{
+                    font-size: 22px;
+                    font-weight: 500;
+                }
+                .pdf-link{
+                    color: var(--futureart-6);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    border-radius: 5px;
+                    padding: 15px;
+                    i{
+                        margin-bottom: 10px;
+                        font-size: 55px;
+                    }
+                }
+                &:hover{
+                    background-color: var(--futureart-6);
+                    color: var(--futureart-1);
+                    transition: all .3s;
+                }
+                &:hover .pdf-link{
+                    color: var(--futureart-1);
+                }
+            }
+        }
+    }
+}
