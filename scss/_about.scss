@@ -1,84 +1,84 @@
-section{
-    &.about{
-        .row{
+section {
+  &.about {
+    .row {
+      width: 100%;
+      .col-12 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        .about-image {
+          position: relative;
+          width: 100%;
+          max-width: 500px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 50px;
+          padding-bottom: 50px;
+          padding-right: 15px;
+          .second-image {
+            position: absolute;
+            width: 70%;
+            right: 0;
+            bottom: 0;
+            border: 5px solid #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+          }
+          @media only screen and (min-width: 992px) {
+            .second-image {
+              transform: translateX(30px);
+            }
+          }
+          .first-image {
             width: 100%;
-            .col-12{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 0;
-                .about-image{
-                    position: relative;
-                    width: 100%;
-                    max-width: 500px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-bottom: 50px;
-                    padding-bottom: 50px;
-                    padding-right: 15px;
-                    .second-image{
-                        position: absolute;
-                        width: 70%;
-                        right: 0;
-                        bottom: 0;
-                        border: 5px solid #fff;
-                        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-                    }
-                    @media only screen and (min-width:992px){
-                        .second-image{
-                            transform: translateX(30px);
-                        }
-                    }
-                    .first-image{
-                        width: 100%;
-                    }
-                    @media only screen and (min-width:992px){
-                        .first-image{
-                            max-height: 400px;
-                        }
-                    }
-                }
-                @media only screen and (min-width:992px){
-                    .about-image{
-                        max-width: 600px;
-                        margin-bottom: 0;
-                        padding-right: 0;
-                    }
-                }
+          }
+          @media only screen and (min-width: 992px) {
+            .first-image {
+              max-height: 400px;
             }
-            @media only screen and (min-width:992px){
-                .col-12:last-child{
-                    padding-left: 30px;
-                    align-items: flex-start;
-                }
-            }
+          }
         }
-        .content{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            width: 100%;
-            .section-title{
-                margin-bottom: 30px;
-            }
-            .text{
-                font-size: 14px;
-                text-align: center;
-            }
-            @media only screen and (min-width:992px){
-                .text{
-                    text-align: start;
-                }
-            }
+        @media only screen and (min-width: 992px) {
+          .about-image {
+            max-width: 600px;
+            margin-bottom: 0;
+            padding-right: 0;
+          }
         }
-        @media only screen and (min-width:992px){
-            .content{
-                align-items: flex-start;
-                display: flex;
-                justify-content: center;
-            }
+      }
+      @media only screen and (min-width: 992px) {
+        .col-12:last-child {
+          padding-left: 30px;
+          align-items: flex-start;
         }
+      }
     }
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      .section-title {
+        margin-bottom: 30px;
+      }
+      .text {
+        font-size: 14px;
+        text-align: center;
+      }
+      @media only screen and (min-width: 992px) {
+        .text {
+          text-align: start;
+        }
+      }
+    }
+    @media only screen and (min-width: 992px) {
+      .content {
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
 }
