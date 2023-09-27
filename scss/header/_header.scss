@@ -137,6 +137,14 @@ header {
       box-shadow: 0 0 5px var(--futureart-1);
       margin-top: 0;
       animation: fix-header 0.8s ease forwards;
+      .header-logo{
+        max-width: 90px;
+      }
+      .bottom{
+        .row{
+          margin-bottom: 10px;
+        }
+      }
     }
     @keyframes fix-header{
       0%{

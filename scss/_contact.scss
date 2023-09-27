@@ -72,6 +72,17 @@ section {
     }
     .address-row {
       width: 100%;
+      animation: contact_animation 0.3s ease forwards;
+      @keyframes contact_animation{
+        0%{
+          transform: scale(0);
+          opacity: 0;
+        }
+        100%{
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
       .address-content {
         width: 100%;
         display: flex;

@@ -12,12 +12,10 @@
   width: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--futureart-5);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--futureart-1);
 }
@@ -424,6 +422,12 @@ header .general-header.fixed-top {
   margin-top: 0;
   animation: fix-header 0.8s ease forwards;
 }
+header .general-header.fixed-top .header-logo {
+  max-width: 90px;
+}
+header .general-header.fixed-top .bottom .row {
+  margin-bottom: 10px;
+}
 @keyframes fix-header {
   0% {
     transform: translateY(-500px);
@@ -709,23 +713,67 @@ section.banner .content .about-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--futureart-6);
+  align-self: center;
+  padding: 15px;
+  margin: 15px 0;
+  border: 2px solid #fff;
+  border-radius: 10px;
   background-color: transparent;
   width: 100%;
   min-width: 120px;
   max-width: 210px;
-  border: 2px solid var(--futureart-6);
-  border-radius: 10px;
-  padding: 15px;
-  margin: 15px 0;
+  position: relative;
+  transition: all 0.6s;
+  --tilt: 1.2rem;
+}
+section.banner .content .about-link span {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  z-index: 3;
+}
+section.banner .content .about-link::after {
+  -webkit-clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 50%, calc(100% - var(--tilt)) 100%, 0 100%);
+          clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 50%, calc(100% - var(--tilt)) 100%, 0 100%);
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  height: 100%;
+  width: 40px;
+  top: 0;
+  left: 0;
+  transform: scale(1);
+  border-radius: 10px 0 0 10px;
+  transition: all 0.6s;
+  opacity: 0;
+}
+section.banner .content .about-link::before {
+  -webkit-clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 50%, calc(100% - var(--tilt)) 100%, 0 100%);
+          clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 50%, calc(100% - var(--tilt)) 100%, 0 100%);
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  height: 100%;
+  width: 40px;
+  top: 0;
+  right: 0;
+  transform: scale(1) rotate(180deg);
+  transition: all 0.6s;
+  border-radius: 10px 0 0 10px;
+  opacity: 0;
 }
 section.banner .content .about-link:hover {
   border-color: transparent;
   transform: scale(1.1);
-  font-weight: 500;
+}
+section.banner .content .about-link:hover span {
   color: #000;
-  background-color: var(--futureart-6);
-  transition: all 0.3s;
+}
+section.banner .content .about-link:hover::after, section.banner .content .about-link:hover::before {
+  width: 70%;
+  opacity: 1;
 }
 
 section.about .row {
@@ -1189,6 +1237,17 @@ section.contact .general-row .contact-dropdown .address-menu button.active {
 }
 section.contact .address-row {
   width: 100%;
+  animation: contact_animation 0.3s ease forwards;
+}
+@keyframes contact_animation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 section.contact .address-row .address-content {
   width: 100%;

@@ -1,83 +1,136 @@
-section{
-    &.banner{
-        width: 100%;
-        min-height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-bottom: 50px;
-.banner-swiper{
+section {
+  &.banner {
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    .swiper-slide{
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 50px;
+    .banner-swiper {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      .swiper-slide {
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 1;
-        img{
-            width: 100%;
-            height: 100%;
-            min-height: 80vh;
-            object-fit: cover;
+        img {
+          width: 100%;
+          height: 100%;
+          min-height: 80vh;
+          object-fit: cover;
         }
+      }
     }
-    
-}
-.content{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    padding: 50px 25px;
-    .title{
+    .content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 50px 25px;
+      .title {
         color: var(--futureart-6);
         font-size: 28px;
         text-align: center;
         // margin-bottom: 40px;
-    }
-    @media only screen and (min-width:576px){
-        .title{
-            font-size: 36px;
-            font-weight: 600;
+      }
+      @media only screen and (min-width: 576px) {
+        .title {
+          font-size: 36px;
+          font-weight: 600;
         }
-    }
-    .text{
+      }
+      .text {
         color: var(--futureart-6);
         text-align: center;
         max-width: 1000px;
         font-size: 16px;
         margin-bottom: 35px;
         margin-top: 20px;
-    }
-    .about-link{
+      }
+      .about-link {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--futureart-6);
+        align-self: center;
+        padding: 15px;
+        margin: 15px 0;
+        border: 2px solid #fff;
+        border-radius: 10px;
         background-color: transparent;
         width: 100%;
         min-width: 120px;
         max-width: 210px;
-        border: 2px solid var(--futureart-6);
-        border-radius: 10px;
-        padding: 15px;
-        margin: 15px 0;
-        &:hover{
-            border-color: transparent;
-            transform: scale(1.1);
-            font-weight: 500;
-            color: #000;
-            background-color: var(--futureart-6);
-            transition: all .3s;
+        position: relative;
+        transition: all 0.6s;
+        --tilt: 1.2rem;
+        span {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 500;
+          z-index: 3;
         }
+        &::after {
+          clip-path: polygon(
+            0 0,
+            calc(100% - var(--tilt)) 0,
+            100% 50%,
+            calc(100% - var(--tilt)) 100%,
+            0 100%
+          );
+          content: "";
+          position: absolute;
+          display: block;
+          background-color: #fff;
+          height: 100%;
+          width: 40px;
+          top: 0;
+          left: 0;
+          transform: scale(1);
+          border-radius: 10px 0 0 10px;
+          transition: all 0.6s;
+          opacity: 0;
+        }
+        &::before {
+          clip-path: polygon(
+            0 0,
+            calc(100% - var(--tilt)) 0,
+            100% 50%,
+            calc(100% - var(--tilt)) 100%,
+            0 100%
+          );
+          content: "";
+          position: absolute;
+          display: block;
+          background-color: #fff;
+          height: 100%;
+          width: 40px;
+          top: 0;
+          right: 0;
+          transform: scale(1) rotate(180deg);
+          transition: all 0.6s;
+          border-radius: 10px 0 0 10px;
+          opacity: 0;
+        }
+        &:hover {
+          border-color: transparent;
+          transform: scale(1.1);
+          span {
+            color: #000;
+          }
+          &::after,
+          &::before {
+            width: 70%;
+            opacity: 1;
+          }
+        }
+      }
     }
-}
-}
-
+  }
 }
